@@ -26,3 +26,7 @@ jobs:
       run: dotnet build TRPO-Lab3.1.sln --no-restore
     - name: Test
       run: dotnet test TRPO-Lab3.1.sln --no-build --verbosity normal
+    - name: Upload ConsoleApp
+      uses: actions/upload-artifact@v4
+      with:
+        path: TRPO-Lab3.ConsoleApp/bin/Debug
