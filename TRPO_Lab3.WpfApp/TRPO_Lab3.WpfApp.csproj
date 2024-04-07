@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="formula-ploshhadi-sektora-kruga-cherez-radius-i-ugol-v-gradusah.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="image\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TRPO-Lab3.Lib\TRPO-Lab3.Lib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="formula-ploshhadi-sektora-kruga-cherez-radius-i-ugol-v-gradusah.png" />
+  </ItemGroup>
+
+</Project>

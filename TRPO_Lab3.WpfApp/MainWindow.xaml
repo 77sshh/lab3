@@ -1,0 +1,31 @@
+﻿<Window x:Class="TRPO_Lab3.WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TRPO_Lab3.WpfApp"
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignData MainViewModel}"
+        Title="MainWindow" Height="521" Width="764">
+
+    <Grid>
+        <Image HorizontalAlignment="Left" Height="308" Margin="5,188,0,0" VerticalAlignment="Top" Width="760" Source="/formula-ploshhadi-sektora-kruga-cherez-radius-i-ugol-v-gradusah.png" RenderTransformOrigin="0.5,0.5" Stretch="Fill">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.34"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="2.308"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <TextBox HorizontalAlignment="Left" Margin="254,59,0,0" TextWrapping="Wrap" Text="{Binding radiu5, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="20,55,0,0" TextWrapping="Wrap" Text="Введите радиус круга:" VerticalAlignment="Top" FontSize="15"/>
+        <TextBlock HorizontalAlignment="Left" Margin="161,10,0,0" TextWrapping="Wrap" Text="Программа для вычисления площади сегмента круга" VerticalAlignment="Top" FontSize="17"/>
+        <TextBlock HorizontalAlignment="Left" Margin="20,97,0,0" TextWrapping="Wrap" Text="Введите угол сегмента (градусы):" VerticalAlignment="Top" FontSize="15"/>
+        <TextBox HorizontalAlignment="Left" Margin="254,101,0,0" TextWrapping="Wrap" Text="{Binding angle, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="552,59,0,0" TextWrapping="Wrap" Text="Результат:" VerticalAlignment="Top" FontSize="15"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,159,0,0" TextWrapping="Wrap" Text="Площадь сегмента круга" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox HorizontalAlignment="Left" Margin="532,101,0,0" TextWrapping="Wrap" Text="{Binding Area, Mode=OneWay, StringFormat={}{0:F5}}" VerticalAlignment="Top" Width="125"/>
+    </Grid>
+</Window>
